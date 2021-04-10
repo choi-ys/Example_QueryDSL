@@ -66,6 +66,4 @@ public class Team {
     public void changeTeamName(String changedTeamName){
         this.name = changedTeamName;
     }
-
-
 }
