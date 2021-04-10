@@ -4,6 +4,7 @@ import com.querydsl.jpa.impl.JPAQueryFactory;
 import io.example.querydsl.domain.Member;
 import io.example.querydsl.domain.QMember;
 import io.example.querydsl.generator.MemberGenerator;
+import io.example.querydsl.repository.MemberRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +36,7 @@ class HelloQueryDslTest {
     EntityManager entityManager;
 
     @Autowired
-    SpringDataJpaRepository springDataJpaRepository;
+    MemberRepository memberRepository;
 
     @Test
     @DisplayName("findMemberById:JPQL")
@@ -66,7 +67,7 @@ class HelloQueryDslTest {
         entityManager.clear();
 
         // When
-        Member selectedMember = springDataJpaRepository.findMemberToQueryMethodByNo(savedMember.getNo());
+        Member selectedMember = memberRepository.findMemberToQueryMethodByNo(savedMember.getNo());
 
         // Then
         assertEquals(selectedMember.getNo(), savedMember.getNo());
@@ -82,7 +83,7 @@ class HelloQueryDslTest {
         entityManager.clear();
 
         // When
-        Member selectedMember = springDataJpaRepository.findMemberToQueryAnnotationByNo(savedMember.getNo());
+        Member selectedMember = memberRepository.findMemberToQueryAnnotationByNo(savedMember.getNo());
 
         // Then
         assertEquals(selectedMember.getNo(), savedMember.getNo());

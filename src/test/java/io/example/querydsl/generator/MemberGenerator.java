@@ -1,7 +1,7 @@
 package io.example.querydsl.generator;
 
-import io.example.querydsl.chO1_hello_query_dsl.SpringDataJpaRepository;
 import io.example.querydsl.domain.Member;
+import io.example.querydsl.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -12,18 +12,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class MemberGenerator {
 
     @Autowired
-    SpringDataJpaRepository springDataJpaRepository;
+    MemberRepository memberRepository;
 
     public Member savedMember(){
         String memberName = "최용석";
         int age = 31;
         Member member = this.memberBuild(memberName, age);
-        return this.springDataJpaRepository.save(member);
+        return this.memberRepository.save(member);
     }
 
     public Member savedMemberWithParam(String memberName, int age){
         Member member = memberBuild(memberName, age);
-        return this.springDataJpaRepository.save(member);
+        return this.memberRepository.save(member);
     }
 
     private Member memberBuild(String memberName, int age) {
