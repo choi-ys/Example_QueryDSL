@@ -25,7 +25,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 @Transactional
 @DisplayName("QueryDSL의 다양한 Return Type")
 @Import(MemberGenerator.class)
-public class QueryDslSortingCondition {
+public class QueryDslSearchCondition {
 
     @Resource
     MemberGenerator memberGenerator;
