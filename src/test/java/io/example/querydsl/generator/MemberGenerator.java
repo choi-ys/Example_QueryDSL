@@ -17,10 +17,20 @@ public class MemberGenerator {
     public Member savedMember(){
         String memberName = "최용석";
         int age = 31;
+        Member member = this.memberBuild(memberName, age);
+        return this.springDataJpaRepository.save(member);
+    }
+
+    public Member savedMemberWithParam(String memberName, int age){
+        Member member = memberBuild(memberName, age);
+        return this.springDataJpaRepository.save(member);
+    }
+
+    private Member memberBuild(String memberName, int age) {
         Member member = Member.builder()
                 .name(memberName)
                 .age(age)
                 .build();
-        return this.springDataJpaRepository.save(member);
+        return member;
     }
 }
