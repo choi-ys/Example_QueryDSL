@@ -1,6 +1,7 @@
 package io.example.querydsl.ch04_query_dsl_sorting;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
+import io.example.querydsl.config.BaseTest;
 import io.example.querydsl.domain.Member;
 import io.example.querydsl.domain.Team;
 import io.example.querydsl.generator.MemberGenerator;
@@ -20,21 +21,8 @@ import java.util.List;
 import static io.example.querydsl.domain.QMember.member;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
-@SpringBootTest(webEnvironment = RANDOM_PORT)
-@Transactional
 @DisplayName("QueryDSL의 정렬 처리")
-@Import({MemberGenerator.class, TeamGenerator.class})
-public class QueryDslSortingCondition {
-
-    @Resource
-    MemberGenerator memberGenerator;
-
-    @Resource
-    TeamGenerator teamGenerator;
-
-    @Autowired
-    EntityManager entityManager;
-    JPAQueryFactory jpaQueryFactory;
+public class QueryDslSortingCondition extends BaseTest {
 
     @BeforeEach
     public void setUp(){

@@ -2,36 +2,19 @@ package io.example.querydsl.ch02_query_dsl_return_type;
 
 import com.querydsl.core.QueryResults;
 import com.querydsl.jpa.impl.JPAQueryFactory;
+import io.example.querydsl.config.BaseTest;
 import io.example.querydsl.domain.Member;
-import io.example.querydsl.generator.MemberGenerator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Import;
-import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.Resource;
-import javax.persistence.EntityManager;
 import java.util.List;
 
 import static io.example.querydsl.domain.QMember.member;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
-@SpringBootTest(webEnvironment = RANDOM_PORT)
-@Transactional
 @DisplayName("QueryDSL의 다양한 Return Type")
-@Import(MemberGenerator.class)
-public class QueryDslReturnType {
-
-    @Resource
-    MemberGenerator memberGenerator;
-
-    @Autowired
-    EntityManager entityManager;
-    JPAQueryFactory jpaQueryFactory;
+public class QueryDslReturnType extends BaseTest {
 
     @BeforeEach
     public void setUp(){

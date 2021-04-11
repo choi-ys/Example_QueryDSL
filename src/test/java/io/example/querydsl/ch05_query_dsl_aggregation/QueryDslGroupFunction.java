@@ -2,41 +2,20 @@ package io.example.querydsl.ch05_query_dsl_aggregation;
 
 import com.querydsl.core.Tuple;
 import com.querydsl.jpa.impl.JPAQueryFactory;
+import io.example.querydsl.config.BaseTest;
 import io.example.querydsl.domain.Member;
 import io.example.querydsl.domain.Team;
-import io.example.querydsl.generator.MemberGenerator;
-import io.example.querydsl.generator.TeamGenerator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Import;
-import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.Resource;
-import javax.persistence.EntityManager;
 import java.util.List;
 
 import static io.example.querydsl.domain.QMember.member;
 import static io.example.querydsl.domain.QTeam.team;
-import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
-@SpringBootTest(webEnvironment = RANDOM_PORT)
-@Transactional
-@DisplayName("Query DSL의 통계 함수 예제")
-@Import({MemberGenerator.class, TeamGenerator.class})
-public class QueryDslGroupFunction {
-
-    @Resource
-    MemberGenerator memberGenerator;
-
-    @Resource
-    TeamGenerator teamGenerator;
-
-    @Autowired
-    EntityManager entityManager;
-    JPAQueryFactory jpaQueryFactory;
+@DisplayName("Query DSL의 그룹 함수 예제")
+public class QueryDslGroupFunction extends BaseTest {
 
     @BeforeEach
     public void setUp(){
