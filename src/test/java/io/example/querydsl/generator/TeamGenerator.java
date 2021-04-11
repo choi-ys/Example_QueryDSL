@@ -11,10 +11,18 @@ public class TeamGenerator {
 
     public Team savedTeam(){
         String teamName = "CoreDevTeam";
-        Team team = Team.builder()
-                .name(teamName)
-                .build();
+        Team team = teamBuilder(teamName);
         return teamRepository.save(team);
     }
 
+    public Team savedTeamWithTeamName(String teamName){
+        Team team = teamBuilder(teamName);
+        return teamRepository.save(team);
+    }
+
+    private Team teamBuilder(String teamName) {
+        return Team.builder()
+                .name(teamName)
+                .build();
+    }
 }

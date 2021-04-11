@@ -1,6 +1,7 @@
 package io.example.querydsl.generator;
 
 import io.example.querydsl.domain.Member;
+import io.example.querydsl.domain.Team;
 import io.example.querydsl.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -17,19 +18,25 @@ public class MemberGenerator {
     public Member savedMember(){
         String memberName = "최용석";
         int age = 31;
-        Member member = this.memberBuild(memberName, age);
+        Member member = this.memberBuild(memberName, age, null);
         return this.memberRepository.save(member);
     }
 
     public Member savedMemberWithParam(String memberName, int age){
-        Member member = memberBuild(memberName, age);
+        Member member = memberBuild(memberName, age, null);
         return this.memberRepository.save(member);
     }
 
-    private Member memberBuild(String memberName, int age) {
+    public Member savedMemberWithTeam(String memberName, int age, Team team){
+        Member member = memberBuild(memberName, age, team);
+        return this.memberRepository.save(member);
+    }
+
+    private Member memberBuild(String memberName, int age, Team team) {
         Member member = Member.builder()
                 .name(memberName)
                 .age(age)
+                .team(team)
                 .build();
         return member;
     }
