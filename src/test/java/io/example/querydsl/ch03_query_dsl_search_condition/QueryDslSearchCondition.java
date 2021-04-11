@@ -1,6 +1,7 @@
 package io.example.querydsl.ch03_query_dsl_search_condition;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
+import io.example.querydsl.config.BaseTest;
 import io.example.querydsl.domain.Member;
 import io.example.querydsl.generator.MemberGenerator;
 import org.junit.jupiter.api.BeforeEach;
@@ -21,18 +22,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
-@SpringBootTest(webEnvironment = RANDOM_PORT)
-@Transactional
 @DisplayName("QueryDSL의 다양한 Return Type")
-@Import(MemberGenerator.class)
-public class QueryDslSearchCondition {
-
-    @Resource
-    MemberGenerator memberGenerator;
-
-    @Autowired
-    EntityManager entityManager;
-    JPAQueryFactory jpaQueryFactory;
+public class QueryDslSearchCondition extends BaseTest {
 
     @BeforeEach
     public void setUp(){
