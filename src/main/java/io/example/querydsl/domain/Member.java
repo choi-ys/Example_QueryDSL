@@ -1,5 +1,6 @@
 package io.example.querydsl.domain;
 
+import io.example.querydsl.domain.common.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,7 +24,7 @@ import static lombok.AccessLevel.PROTECTED;
 )
 @Getter
 @NoArgsConstructor(access = PROTECTED)
-public class Member {
+public class Member extends BaseTimeEntity {
 
     @Id @GeneratedValue(generator = "MEMBER_ENTITY_SEQ_GENERATOR")
     @Column(name = "member_no")
