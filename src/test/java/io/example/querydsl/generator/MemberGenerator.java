@@ -15,9 +15,10 @@ public class MemberGenerator {
     @Autowired
     MemberRepository memberRepository;
 
+    private static String memberName = "최용석";
+    private static int age = 31;
+
     public Member savedMember(){
-        String memberName = "최용석";
-        int age = 31;
         Member member = this.memberBuild(memberName, age, null);
         return this.memberRepository.save(member);
     }
@@ -32,7 +33,11 @@ public class MemberGenerator {
         return this.memberRepository.save(member);
     }
 
-    private Member memberBuild(String memberName, int age, Team team) {
+    public static Member getMember(){
+        return memberBuild(memberName, age, null);
+    }
+
+    private static Member memberBuild(String memberName, int age, Team team) {
         Member member = Member.builder()
                 .name(memberName)
                 .age(age)
