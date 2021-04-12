@@ -29,7 +29,7 @@ public class DynamicQueryByWhereCondition extends BaseTest {
 
     @Test
     @DisplayName("Where 조건을 이용한 동적 쿼리 생성 : 전체 검색 조건")
-    @Rollback(value = false)
+//    @Rollback(value = false)
     public void dynamicQueryByWhereConditionWithAllParam(){
         // Given
         memberGenerator.savedMemberWithParam("최용석", 31);
@@ -53,7 +53,7 @@ public class DynamicQueryByWhereCondition extends BaseTest {
 
     @Test
     @DisplayName("Where 조건을 이용한 동적 쿼리 생성 : 일부 검색 조건")
-    @Rollback(value = false)
+//    @Rollback(value = false)
     public void dynamicQueryByWhereConditionWithNullParam(){
         // Given
         memberGenerator.savedMemberWithParam("최용석", 31);
@@ -85,7 +85,7 @@ public class DynamicQueryByWhereCondition extends BaseTest {
 
     @Test
     @DisplayName("Where 조건을 이용한 동적 쿼리 생성 : DTO 검색 조건")
-    @Rollback(value = false)
+//    @Rollback(value = false)
     public void newTest(){
         // Given
         memberGenerator.savedMemberWithParam("최용석", 31);

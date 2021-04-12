@@ -23,7 +23,7 @@ public class DynamicQueryByBooleanBuilder extends BaseTest {
 
     @Test
     @DisplayName("BooleanBuilder with All Param")
-    @Rollback(value = false)
+//    @Rollback(value = false)
     public void booleanBuilderByAllParam(){
         // Given
         memberGenerator.savedMemberWithParam("최용석", 31);
@@ -43,7 +43,7 @@ public class DynamicQueryByBooleanBuilder extends BaseTest {
 
     @Test
     @DisplayName("BooleanBuilder with Null Param")
-    @Rollback(value = false)
+//    @Rollback(value = false)
     public void booleanBuilderWithNullParm(){
         // Given
         memberGenerator.savedMemberWithParam("최용석", 31);
