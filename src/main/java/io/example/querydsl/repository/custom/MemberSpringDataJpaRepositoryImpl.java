@@ -1,4 +1,4 @@
-package io.example.querydsl.repository;
+package io.example.querydsl.repository.custom;
 
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQueryFactory;
