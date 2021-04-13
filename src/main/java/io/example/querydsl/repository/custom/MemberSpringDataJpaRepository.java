@@ -1,4 +1,4 @@
-package io.example.querydsl.repository;
+package io.example.querydsl.repository.custom;
 
 import io.example.querydsl.domain.Member;
 import org.springframework.data.jpa.repository.JpaRepository;

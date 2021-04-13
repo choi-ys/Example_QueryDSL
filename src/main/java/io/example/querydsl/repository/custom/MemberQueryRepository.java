@@ -1,4 +1,4 @@
-package io.example.querydsl.repository;
+package io.example.querydsl.repository.custom;
 
 import io.example.querydsl.domain.dto.MemberTeamDto;
 import io.example.querydsl.domain.search.MemberSearchCondition;

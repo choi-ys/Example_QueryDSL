@@ -6,7 +6,7 @@ import io.example.querydsl.domain.Team;
 import io.example.querydsl.domain.dto.MemberTeamDto;
 import io.example.querydsl.domain.search.MemberSearchCondition;
 import io.example.querydsl.generator.MemberGenerator;
-import io.example.querydsl.repository.MemberSpringDataJpaRepository;
+import io.example.querydsl.repository.custom.MemberSpringDataJpaRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
