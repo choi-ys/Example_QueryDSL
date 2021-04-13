@@ -1,4 +1,4 @@
-package io.example.querydsl.ch10_query_dsl_projection_default;
+package io.example.querydsl.ch10_default_projection;
 
 import com.querydsl.core.Tuple;
 import com.querydsl.jpa.impl.JPAQueryFactory;

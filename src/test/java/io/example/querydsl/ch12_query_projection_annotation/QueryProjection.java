@@ -1,4 +1,4 @@
-package io.example.querydsl.ch12_query_dsl_query_projection_annotation;
+package io.example.querydsl.ch12_query_projection_annotation;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import io.example.querydsl.config.BaseTest;

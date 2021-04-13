@@ -1,4 +1,4 @@
-package io.example.querydsl.ch08_query_dsl_case;
+package io.example.querydsl.ch08_case;
 
 import com.querydsl.core.Tuple;
 import com.querydsl.core.types.dsl.CaseBuilder;

@@ -1,4 +1,4 @@
-package io.example.querydsl.ch09_query_dsl_constants;
+package io.example.querydsl.ch09_constants;
 
 import com.querydsl.core.Tuple;
 import com.querydsl.core.types.dsl.Expressions;

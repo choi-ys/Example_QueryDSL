@@ -1,4 +1,4 @@
-package io.example.querydsl.ch07_query_dsl_sub_query;
+package io.example.querydsl.ch07_sub_query;
 
 import com.querydsl.core.Tuple;
 import com.querydsl.jpa.JPAExpressions;
