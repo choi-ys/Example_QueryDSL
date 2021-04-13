@@ -1,4 +1,4 @@
-package io.example.querydsl.ch06_query_dsl_join;
+package io.example.querydsl.ch06_join;
 
 import com.querydsl.core.Tuple;
 import com.querydsl.jpa.impl.JPAQueryFactory;

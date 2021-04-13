@@ -1,4 +1,4 @@
-package io.example.querydsl.ch02_query_dsl_return_type;
+package io.example.querydsl.ch02_return_type;
 
 import com.querydsl.core.QueryResults;
 import com.querydsl.jpa.impl.JPAQueryFactory;

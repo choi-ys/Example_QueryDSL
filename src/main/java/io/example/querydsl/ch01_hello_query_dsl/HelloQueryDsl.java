@@ -1,4 +1,4 @@
-package io.example.querydsl.chO1_hello_query_dsl;
+package io.example.querydsl.ch01_hello_query_dsl;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

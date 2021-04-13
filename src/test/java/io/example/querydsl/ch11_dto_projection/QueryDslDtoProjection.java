@@ -1,4 +1,4 @@
-package io.example.querydsl.ch11_query_dsl_projection_dto;
+package io.example.querydsl.ch11_dto_projection;
 
 import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQueryFactory;

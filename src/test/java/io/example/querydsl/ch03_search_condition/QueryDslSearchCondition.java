@@ -1,26 +1,18 @@
-package io.example.querydsl.ch03_query_dsl_search_condition;
+package io.example.querydsl.ch03_search_condition;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import io.example.querydsl.config.BaseTest;
 import io.example.querydsl.domain.Member;
-import io.example.querydsl.generator.MemberGenerator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Import;
-import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.Resource;
-import javax.persistence.EntityManager;
 import java.util.List;
 
 import static io.example.querydsl.domain.QMember.member;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
 @DisplayName("QueryDSL의 다양한 Return Type")
 public class QueryDslSearchCondition extends BaseTest {

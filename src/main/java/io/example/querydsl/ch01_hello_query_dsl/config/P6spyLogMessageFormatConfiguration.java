@@ -1,4 +1,4 @@
-package io.example.querydsl.chO1_hello_query_dsl.config;
+package io.example.querydsl.ch01_hello_query_dsl.config;
 
 import com.p6spy.engine.spy.P6SpyOptions;
 import org.springframework.context.annotation.Configuration;

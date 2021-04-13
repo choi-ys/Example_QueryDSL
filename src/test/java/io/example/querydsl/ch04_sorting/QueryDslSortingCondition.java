@@ -1,25 +1,16 @@
-package io.example.querydsl.ch04_query_dsl_sorting;
+package io.example.querydsl.ch04_sorting;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import io.example.querydsl.config.BaseTest;
 import io.example.querydsl.domain.Member;
 import io.example.querydsl.domain.Team;
-import io.example.querydsl.generator.MemberGenerator;
-import io.example.querydsl.generator.TeamGenerator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Import;
-import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.Resource;
-import javax.persistence.EntityManager;
 import java.util.List;
 
 import static io.example.querydsl.domain.QMember.member;
-import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
 @DisplayName("QueryDSL의 정렬 처리")
 public class QueryDslSortingCondition extends BaseTest {

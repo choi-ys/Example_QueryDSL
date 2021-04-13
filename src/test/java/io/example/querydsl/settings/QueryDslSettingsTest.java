@@ -1,7 +1,7 @@
 package io.example.querydsl.settings;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
-import io.example.querydsl.chO1_hello_query_dsl.HelloQueryDsl;
+import io.example.querydsl.ch01_hello_query_dsl.HelloQueryDsl;
 import io.example.querydsl.chO1_hello_query_dsl.QHelloQueryDsl;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
